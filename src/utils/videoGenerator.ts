@@ -304,6 +304,18 @@ function getThemeThumbnail(style: string): string {
 export function matchStockVideo(params: GenerationParams): { videoUrl: string; thumbnailUrl: string } {
   const p = params.prompt.toLowerCase();
 
+  if (p.includes('dubai') || (p.includes('car') && p.includes('flying'))) {
+    return {
+      videoUrl: INITIAL_FEATURED_VIDEOS[0].videoUrl,
+      thumbnailUrl: INITIAL_FEATURED_VIDEOS[0].thumbnailUrl,
+    };
+  }
+  if (p.includes('snow') || p.includes('alpine') || p.includes('mountain') || p.includes('ridge')) {
+    return {
+      videoUrl: INITIAL_FEATURED_VIDEOS[5].videoUrl,
+      thumbnailUrl: INITIAL_FEATURED_VIDEOS[5].thumbnailUrl,
+    };
+  }
   if (p.includes('city') || p.includes('cyber') || p.includes('flying car') || p.includes('future') || p.includes('night')) {
     return {
       videoUrl: INITIAL_FEATURED_VIDEOS[0].videoUrl,
@@ -316,7 +328,7 @@ export function matchStockVideo(params: GenerationParams): { videoUrl: string; t
       thumbnailUrl: INITIAL_FEATURED_VIDEOS[1].thumbnailUrl,
     };
   }
-  if (p.includes('astronaut') || p.includes('alien') || p.includes('planet') || p.includes('space') || p.includes('stars')) {
+  if (p.includes('astronaut') || p.includes('mars') || p.includes('alien') || p.includes('planet') || p.includes('space') || p.includes('stars')) {
     return {
       videoUrl: INITIAL_FEATURED_VIDEOS[2].videoUrl,
       thumbnailUrl: INITIAL_FEATURED_VIDEOS[2].thumbnailUrl,
@@ -334,13 +346,13 @@ export function matchStockVideo(params: GenerationParams): { videoUrl: string; t
       thumbnailUrl: INITIAL_FEATURED_VIDEOS[4].thumbnailUrl,
     };
   }
-  if (p.includes('car') || p.includes('commercial') || p.includes('speed') || p.includes('vehicle')) {
+  if (p.includes('car') || p.includes('lamborghini') || p.includes('commercial') || p.includes('speed') || p.includes('vehicle')) {
     return {
       videoUrl: INITIAL_FEATURED_VIDEOS[5].videoUrl,
       thumbnailUrl: INITIAL_FEATURED_VIDEOS[5].thumbnailUrl,
     };
   }
-  if (p.includes('dragon') || p.includes('magic') || p.includes('mountain') || p.includes('castle')) {
+  if (p.includes('dragon') || p.includes('magic') || p.includes('castle')) {
     return {
       videoUrl: INITIAL_FEATURED_VIDEOS[6].videoUrl,
       thumbnailUrl: INITIAL_FEATURED_VIDEOS[6].thumbnailUrl,
