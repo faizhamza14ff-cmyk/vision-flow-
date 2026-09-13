@@ -1,0 +1,6 @@
+{
+  "name": "VisionFlow AI",
+  "description": "Turn your words into stunning cinematic videos with VisionFlow AI. Generate high-quality AI videos from text prompts with professional camera controls, custom styles, and 4K rendering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
